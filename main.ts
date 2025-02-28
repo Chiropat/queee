@@ -562,8 +562,12 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile64`, function (sprite19
 })
 function nivel_actual_ (_123ETS_XD: number) {
     if (_123ETS_XD == 1) {
-        tiles.setCurrentTilemap(tilemap`level1`)
-        game.splash("nivel 1")
+        tiles.setCurrentTilemap(tilemaplevel1)
+        pez_espada()
+        chrome_basico()
+        game.splash("¡Bienvenido a ¿queee?.....")
+        game.showLongText("Usa las flechas para moverte y A para disparar", DialogLayout.Bottom)
+        info.startCountdown(180)
     } else if (_123ETS_XD == 2) {
         tiles.setCurrentTilemap(tilemap`level5`)
         game.splash("patito,patito")
@@ -865,3 +869,4 @@ nivel_actual_(1)
 forever(function () {
     music.play(music.createSong(hex`00780004080200`), music.PlaybackMode.UntilDone)
 })
+
